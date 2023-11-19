@@ -1,2 +1,21 @@
+quarkus:
+  hibernate-orm:
+    database:
+      generation: drop-and-create
+    log:
+      sql: true
+    sql-load-script: import.sql
+
+'%prod':
+  quarkus:
+    datasource:
+      db-kind: postgresql
+      jdbc:
+        max-size: 8
+        min-size: 2
+        url: jdbc:postgresql://localhost/quarkus_test
+      password: quarkus_test
+      username: quarkus_test
+
 greeting:
   message: "hello"
