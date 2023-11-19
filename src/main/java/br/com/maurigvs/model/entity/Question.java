@@ -3,12 +3,14 @@ package br.com.maurigvs.model.entity;
 import br.com.maurigvs.model.dto.QuestionDto;
 import jakarta.json.bind.annotation.JsonbTransient;
 import jakarta.persistence.*;
+import org.eclipse.microprofile.openapi.annotations.media.Schema;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 @Cacheable
+@Schema(name = "QuestionResponse")
 public class Question {
 
     @Id

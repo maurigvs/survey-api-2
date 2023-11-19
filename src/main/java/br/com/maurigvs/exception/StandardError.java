@@ -1,11 +1,15 @@
 package br.com.maurigvs.exception;
 
+import jakarta.json.bind.annotation.JsonbDateFormat;
+import org.eclipse.microprofile.openapi.annotations.media.Schema;
+
 import java.io.Serializable;
 import java.time.ZonedDateTime;
 
+@Schema(name = "ErrorMessage")
 public class StandardError implements Serializable {
 
-    //@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T' HH:ss:ss'Z'")
+    @JsonbDateFormat
     private final ZonedDateTime timestamp = ZonedDateTime.now();
 
     private final String error;

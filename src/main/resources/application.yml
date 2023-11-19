@@ -5,6 +5,8 @@ quarkus:
     log:
       sql: true
     sql-load-script: import.sql
+  smallrye-openapi:
+    enable: true
 
 '%prod':
   quarkus:

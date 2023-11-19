@@ -2,12 +2,14 @@ package br.com.maurigvs.model.entity;
 
 import br.com.maurigvs.model.dto.SurveyDto;
 import jakarta.persistence.*;
+import org.eclipse.microprofile.openapi.annotations.media.Schema;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 @Cacheable
+@Schema(name = "SurveyResponse")
 public class Survey {
 
     @Id

@@ -2,9 +2,11 @@ package br.com.maurigvs.model.entity;
 
 import jakarta.json.bind.annotation.JsonbTransient;
 import jakarta.persistence.*;
+import org.eclipse.microprofile.openapi.annotations.media.Schema;
 
 @Entity
 @Cacheable
+@Schema(name = "ChoiceResponse")
 public class Choice {
 
     @Id
